@@ -1,0 +1,26 @@
+Usage: get_weather_channel.py --key [infodb.com api key] --zip [force zip code] 
+ Specify either key or zip, if both are specified, then error will occur
+
+Options:
+  -h, --help            show this help message and exit
+  -k KEY, --key=KEY     InfoDB API Key - Register @ http://ipinfodb.com/
+  -z ZIPCODE, --zipcode=ZIPCODE
+                        Specify the zip code
+
+
+
+For using with a zipcode:
+GeekTool cmd: /Users/<your_src_location>/geektool_addons/get_weather_channel.py -z 45066 2>/dev/null
+
+In the above scenario, the script will retrieve the weather based on zip code you provide
+
+
+For using with dynamic ip (meaning on the road):
+ /Users/<your_src_location>/geektool_addons/get_weather_channel.py -k <your_ipinfodb_key>
+
+In the above scenario, the script will first reach out to ipinfodb.com and get the zip code as it relates to your IP.  Note
+that this is not as specific as using your zip, as most IP's are regional.  For instance, I live in Springboro Ohio, but if 
+you look up the zip for my ip address, it would come as a Dayton Ohio IP (about 20 minutes north of where I live).
+
+
+
